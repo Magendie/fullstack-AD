@@ -1,15 +1,12 @@
-const Persons = (props) => {
-    return(
-        <div>
-        {props.persons.map((person, index) => (
-          <div key={index}>
-            <p>
-              {person.name} {person.number}
-            </p>
-          </div>
-        ))}
-      </div>
-    )
-}
+const Persons = ({ person, deletePerson }) => {
+  return (
+    <div>
+      <p>
+        {person.name} {person.number}
+        <button onClick={deletePerson}>delete</button>
+      </p>
+    </div>
+  );
+};
 
-export default Persons
+export default Persons;
